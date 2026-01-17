@@ -82,16 +82,11 @@ Pipeline Architecture:
 - **Scaling**: StandardScaler for logistic regression (XGBoost handles raw features)
 
 ### Model Development
-- **Train/Test Split**: 80/20 with stratification to maintain class balance
-- **Baseline Model**: Logistic Regression (interpretable, regulatory-friendly)
-- **Production Model**: XGBoost with optimized hyperparameters
-  - `learning_rate`: 0.1
-  - `max_depth`: 4
-  - `n_estimators`: 300
-  - `eval_metric`: 'logloss'
+- **Train/Test Split**: 80/20
+- **Baseline Model**: Logistic Regression
+- **Production Model**: XGBoost
 
-  ### Risk Calculation Framework
-```python
+### Risk Calculation Framework
 Expected Loss = PD × EAD × LGD
 
 Where:
@@ -109,4 +104,3 @@ LGD Mapping:
   'F': 0.75,
   'G': 0.85   
 }
-```
