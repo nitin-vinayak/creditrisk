@@ -94,13 +94,8 @@ Where:
 - EAD (Exposure at Default): Loan amount
 - LGD (Loss Given Default): Grade-specific loss severity
 
-LGD Mapping:
-{
-  'A': 0.25,  
-  'B': 0.35,
-  'C': 0.45,
-  'D': 0.55,
-  'E': 0.65,
-  'F': 0.75,
-  'G': 0.85   
-}
+## Contact & Links
+
+**Author**: Nitin Vinayak  
+**Email**: nitinvinayak.m@gmail.com
+**LinkedIn**: [linkedin.com/in/nitin-vinayak](https://linkedin.com/in/nitin-vinayak) 
