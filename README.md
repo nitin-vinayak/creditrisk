@@ -97,5 +97,5 @@ Where:
 ## Contact & Links
 
 **Author**: Nitin Vinayak  
-**Email**: nitinvinayak.m@gmail.com
+**Email**: nitinvinayak.m@gmail.com  
 **LinkedIn**: [linkedin.com/in/nitin-vinayak](https://linkedin.com/in/nitin-vinayak) 
