@@ -9,7 +9,8 @@ Advanced credit risk prediction framework implementing PD (Probability of Defaul
 - **Stress Testing**: Multiple scenario analysis (Baseline, Mild, Moderate, Heavy)
 - **Visualizations**: Grade-level risk distribution and stress impact analysis
 
-## Technical Stack
+## Technical Stack'
+
 ### Core Technologies
 - **Machine Learning**: scikit-learn 1.3.2, XGBoost 2.0.3
 - **Data Processing**: pandas 2.1.4, numpy 1.26.2
@@ -46,6 +47,7 @@ Pipeline Architecture:
 - **83% F1 Score**: Optimal balance between precision and recall
 
 ## Portfolio Analysis
+
 ### Key Metrics
 - Portfolio Default Rate (PD): 21.68%
 - Average Exposure (EAD): $9,670.39
@@ -71,3 +73,40 @@ Pipeline Architecture:
 | **Moderate Stress** | 1.5× | +10% | $13,357,031 | +81.7% |
 | **Heavy Stress** | 2.0× | +20% | $20,877,152 | +184.0% |
 
+## Key Methodology
+
+### Data Preprocessing
+- **Missing Values**: Median imputation (numeric), mode imputation (categorical)
+- **Feature Encoding**: OneHotEncoder for `person_home_ownership` and `loan_intent`
+- **Custom Transformers**: Grade mapping (A→1, B→2, ..., G→7), binary encoding for defaults
+- **Scaling**: StandardScaler for logistic regression (XGBoost handles raw features)
+
+### Model Development
+- **Train/Test Split**: 80/20 with stratification to maintain class balance
+- **Baseline Model**: Logistic Regression (interpretable, regulatory-friendly)
+- **Production Model**: XGBoost with optimized hyperparameters
+  - `learning_rate`: 0.1
+  - `max_depth`: 4
+  - `n_estimators`: 300
+  - `eval_metric`: 'logloss'
+
+  ### Risk Calculation Framework
+```python
+Expected Loss = PD × EAD × LGD
+
+Where:
+- PD (Probability of Default): Model predicted probability
+- EAD (Exposure at Default): Loan amount
+- LGD (Loss Given Default): Grade-specific loss severity
+
+LGD Mapping:
+{
+  'A': 0.25,  
+  'B': 0.35,
+  'C': 0.45,
+  'D': 0.55,
+  'E': 0.65,
+  'F': 0.75,
+  'G': 0.85   
+}
+```
