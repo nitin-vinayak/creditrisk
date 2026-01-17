@@ -9,7 +9,7 @@ Advanced credit risk prediction framework implementing PD (Probability of Defaul
 - **Stress Testing**: Multiple scenario analysis (Baseline, Mild, Moderate, Heavy)
 - **Visualizations**: Grade-level risk distribution and stress impact analysis
 
-## Technical Stack'
+## Technical Stack
 
 ### Core Technologies
 - **Machine Learning**: scikit-learn 1.3.2, XGBoost 2.0.3
