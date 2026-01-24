@@ -1,4 +1,4 @@
-# Credit Risk Analysis and Expected Loss Modeling 
+# Credit Risk Analysis and Loan Default Prediction 
 
 ## Project Overeview 
 Advanced credit risk prediction framework implementing PD (Probability of Default), LGD (Loss Given Default), and EAD (Exposure at Default) modeling with comprehensive stress testing scenarios.
