@@ -22,7 +22,7 @@ Advanced credit risk prediction framework implementing PD (Probability of Defaul
 Pipeline Architecture:  
 ├── Feature Engineering
 │   ├── OrdinalEncoder (loan_grade: A < B < C < D < E < F < G)
-│   ├── OrdinalEncoder (cb_person_default_on_file: N/Y)
+│   ├── BinaryEncoder (cb_person_default_on_file: N/Y)
 │   ├── SimpleImputer (median for numeric, most_frequent for categorical)
 │   └── OneHotEncoder (person_home_ownership, loan_intent)
 ├── Preprocessing
